@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikkyau</title>
+    <link rel="icon" type="image/png" href="{% static 'mainapp/brandimage/ikkyau_icon.svg' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--ここからナビゲーションバーの設定-->
+    <nav class="navbar sticky-top navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'mainapp:index' %}">
+            <img src="{% static 'mainapp/brandimage/ikkyau_icon.svg' %}" width="50" height="50" alt="">
+            Ikkyau
+        </a>
+        
+        <form class="form-inline w-50">
+            <select class="form-control ">
+                <option value="all">All</option>
+                <option value="music">Music</option>
+                <option value="spot">Spot</option>
+            </select>
+            <input class="form-control w-50" type="search" placeholder="" aria-label="Search">
+            <button class="btn btn-outline-success w-25" type="submit">Search</button>
+        </form>
+        
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'mainapp:exploreplan' %}">Explore Plan</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Make Plan</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">My page</a>
+            </li>
+        </ul>
+        
+
+    </nav>
+    <!--ここまでナビゲーションバーの設定-->
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!--ここから下はBootStrapを使用するためのjqueryなので、勝手に消したりしない-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

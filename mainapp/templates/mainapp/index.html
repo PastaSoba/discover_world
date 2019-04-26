@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'mainapp/css/index.css' %}">
+<div class="index_pagebox">
+{% for touristSpot in touristSpots %}
+<a>
+    <div>
+        {{ touristSpot }}
+        <span class="created_datetime">
+            追加日時：{{ touristSpot.created_datetime }}
+        </span>
+    </div>
+</a>
+{% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Compass Direction</title>
+  <desc>A line styled icon from Orion Icon Library.</desc>
+  <path d="M18 46l7-21 21-7-7 21-21 7zm7-21l14 14"
+  stroke-width="4" stroke-miterlimit="10" stroke="#fb3434" fill="none" data-name="layer2"
+  stroke-linejoin="round" stroke-linecap="round"></path>
+  <circle stroke-width="4" stroke-miterlimit="10" stroke="#ff9a2d"
+  fill="none" r="30" cy="32" cx="32" data-name="layer1" stroke-linejoin="round"
+  stroke-linecap="round"></circle>
+</svg>
