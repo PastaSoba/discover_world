@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from .models import TouristSpot
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
@@ -14,3 +15,8 @@ def exploreplan(request):
 
 def aboutus(request):
     return render(request, 'mainapp/aboutus.html')
+
+
+@login_required
+def mypage(request):
+    return render(request, 'mainapp/mypage.html')
